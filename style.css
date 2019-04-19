@@ -71,3 +71,32 @@ html {font-family: 'Segoe UI', sans-serif;}
 .heal {background-color: green; color: white;}
 .give-up {background-color: rgb(252, 252, 1); color: black;}
 .new-game {background-color: blue; color: white;}
+
+/*Logs*/
+
+.logs ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0%;
+    margin: 0%;
+}
+
+.logs ul li {
+    display: flex;
+    justify-content: center;
+    margin: 4px 0px;
+    padding: 3px 0px;
+    border-radius: 3px;
+    font-weight: 400;
+}
+
+.player {
+    background-color: rgb(114, 221, 216);
+    color: rgb(1, 1, 63);
+}
+
+.monster {
+    background-color: red;
+    color: white;
+}

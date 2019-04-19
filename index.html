@@ -41,8 +41,8 @@
         </section> <!--Scores-->
 
         <section v-if="hasResult"  class="panel result">
-            <div v-if="monsterLife == 0" class="win"> Você ganhou, bruxão! :)</div>
-            <div v-else class="lose">Não foi dessa vez, bruxão</div>
+            <div v-if="monsterLife == 0" class="win"> Mandou bem, 2319!! :)</div>
+            <div v-else class="lose">Não foi dessa vez, 2319 :/ </div>
 
         </section> <!--result-->
         <section class="panel buttons">
@@ -52,9 +52,9 @@
                 <button @click='attack(true)' 
                     class="btn especial-attack"> Risada </button>
                 <button @click='healAndHurt'
-                    class="btn heal"> Curar </button>
+                    class="btn heal"> Biscoitinhos </button>
                 <button @click='running = false' 
-                    class="btn give-up"> Desistir </button>
+                    class="btn give-up"> Ir pra cama </button>
             </template>
 
             <button v-else @click='startGame' class="btn new-game"> Iniciar jogo </button>
@@ -62,6 +62,12 @@
         </section><!--buttons-->
 
         <section v-if='logs.length' class="panel logs">
+            
+                <ul>
+                    <li v-for='log in logs' class="log" :class='log.cls'>
+                        {{ log.text }}
+                    </li>
+                </ul>
 
         </section> <!--logs-->
     </div>
