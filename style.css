@@ -77,6 +77,8 @@ html {font-family: 'Segoe UI', sans-serif;}
 .logs ul {
     display: flex;
     flex-direction: column;
+    max-height: 480px;
+    flex-wrap: wrap;
     list-style: none;
     padding: 0%;
     margin: 0%;
