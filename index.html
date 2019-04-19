@@ -7,11 +7,55 @@
     <script src="https://unpkg.com/vue"></script>
 </head>
 <body>
-    <div class="app">
-        <div class="panel scores"> Scores</div>
-        <div class="panel result"></div>
-        <div class="panel buttons"></div>
-        <div class="panel logs"></div>
+    <div id="app">
+        <section class="panel scores">
+            <div class="score">
+
+                <h1>Player</h1>
+                <div class="life-bar">
+                    
+                    <div class="life"
+                        :class='{danger: playerLife < 20}' :style="{width: `${playerLife}%`}">
+
+
+                    </div><!--life-->
+                </div>
+                <div> {{ playerLife }}% </div>
+
+            </div><!--PLAYER-->
+
+            <div class="score">
+
+                <h1>Monstro</h1>
+                <div class="life-bar">
+                    <div class="life" 
+                        :class='{danger: monsterLife < 20}' :style="{width: `${monsterLife}%`}">
+
+                    </div>
+                </div>
+                <div> {{ monsterLife }}% </div>
+
+            </div><!--MONTER-->                
+
+        </section> <!--Scores-->
+
+        <section v-if="hasResult"  class="panel result">
+            <div v-if="monsterLife == 0" class="win"> Você ganhou, bruxão! :)</div>
+            <div v-else class="lose">Não foi dessa vez, bruxão</div>
+
+        </section> <!--result-->
+        <section class="panel buttons">
+            <template v-if='running'>
+                <button class="btn attack"> Ataque </button>
+                <button class="btn especial-attack"> Ataque Especial</button>
+                <button class="btn heal"> Curar </button>
+                <button @click='running = false' class="btn give-up"> Desistir </button>
+            </template>
+
+            <button v-else @click='running = true' class="btn new-game"> Iniciar jogo </button>
+
+        </section><!--buttons-->
+        <section class="panel logs"></section>
     </div>
 
     <script src="app.js"></script>
