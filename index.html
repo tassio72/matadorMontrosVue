@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Matador de mosntros</title>
+    <title>Matador de monstros</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://img.icons8.com/color/48/000000/lucifer.png">
     <script src="https://unpkg.com/vue"></script>
 </head>
 <body>
@@ -52,7 +53,7 @@
                 <button @click='running = false' class="btn give-up"> Desistir </button>
             </template>
 
-            <button v-else @click='running = true' class="btn new-game"> Iniciar jogo </button>
+            <button v-else @click='startGame' class="btn new-game"> Iniciar jogo </button>
 
         </section><!--buttons-->
         <section class="panel logs"></section>
