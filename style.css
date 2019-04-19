@@ -1,11 +1,6 @@
-html {
-    font-family: 'Segoe UI', sans-serif;
-}
+html {font-family: 'Segoe UI', sans-serif;}
 
-#app {
-    display: flex;
-    flex-direction: column;
-}
+#app {display: flex;flex-direction: column;}
 
 .panel {
     margin: 10px;
@@ -15,9 +10,7 @@ html {
 
 /* Scores*/
 
-.scores {
-    display: flex;
-}
+.scores {display: flex;}
 
 .score {
     flex: 1;
@@ -29,7 +22,10 @@ html {
 
 .score h1 {
     font-weight: 400;
+    display: flex;
+    align-items: center;
 }
+.score h1 .play {height: 48px;}
 
 .life-bar{
     width: 80%;
@@ -61,10 +57,7 @@ html {
 
 /*Controle do Jogo*/
 
-.buttons {
-    display: flex;
-    justify-content: center;
-}
+.buttons {display: flex;justify-content: center;}
 
 .btn {
     padding: 5px 10px;
@@ -72,7 +65,7 @@ html {
     border-radius: 5px;
     text-transform: uppercase;
 }
-
+/*buttons*/
 .attack {background-color: red; color: white;}
 .especial-attack {background-color: black; color: white;}
 .heal {background-color: green; color: white;}
